@@ -114,6 +114,19 @@
 			</properties>
 		</profile>
 		<profile>
+			<id>regressionParallel</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+				<property>
+					<name>environment</name>
+					<value>regressionParallel</value>
+				</property>
+			</activation>
+			<properties>
+				<testNGSuite>testngParallelTesting.xml</testNGSuite>
+			</properties>
+		</profile>
+		<profile>
 			<id>full</id>
 			<activation>
 				<activeByDefault>true</activeByDefault>
