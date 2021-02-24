@@ -18,7 +18,7 @@ public class MyAccountParallelTesting extends TestBase2{
 	String newPassword = "123456" ; 
 	String firstName = "Moataz" ; 
 	String lastName = "Nabil" ; 
-	String email = "test3993@gmail.com" ; 
+	String email = "test399332@gmail.com" ; 
 	
 
 	@Test(priority=1)
