@@ -9,9 +9,12 @@ public class LoadProperties
 {
 	// Load the properties file from the folder
 	public static Properties userData =  
-			loadProperties(System.getProperty("user.dir")+"\\src\\main\\java\\properties\\userdata.properties"); 
-	
-	
+			loadProperties(System.getProperty("user.dir")+"/src/main/java/properties/userdata.properties");
+
+	// Load browserStack Account data
+	public static Properties browserStackData =  
+			loadProperties(System.getProperty("user.dir")+"/src/main/java/properties/browserStackUser.properties");
+
 	private static Properties loadProperties(String path)
 	{
 		Properties pro = new Properties();
@@ -20,14 +23,14 @@ public class LoadProperties
 			FileInputStream stream = new FileInputStream(path);
 			pro.load(stream);
 		} catch (FileNotFoundException e) {
-		System.out.println("Error occurred :  " + e.getMessage());
+			System.out.println("Error occurred :  " + e.getMessage());
 		} catch (IOException e) {
 			System.out.println("Error occurred :  " + e.getMessage());
 		} 
 		catch (NullPointerException e) {
 			System.out.println("Error occurred :  " + e.getMessage());
 		} 
-	
+
 		return pro; 
 	}
 }

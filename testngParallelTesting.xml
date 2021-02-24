@@ -1,14 +1,18 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Regression Suite" parallel="tests" thread-count="2">
 	<test name="Chrome Regression Test">
-		<parameter name="browser" value="chrome" />
+		<parameter name="browser" value="Chrome" />
+		<parameter name="os" value="OS X" />
+		<parameter name="os_version" value="Big Sur" />
 		<classes>
 			<class name="tests.UserRegistrationUsingParallelTesting" />
 		</classes>
 	</test>
 
 	<test name="Firefox Regression Test">
-		<parameter name="browser" value="firefox" />
+		<parameter name="browser" value="Firefox" />
+		<parameter name="os" value="Windows" />
+		<parameter name="os_version" value="10" />
 		<classes>
 			<class name="tests.MyAccountParallelTesting" />
 		</classes>

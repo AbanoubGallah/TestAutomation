@@ -45,6 +45,6 @@ public class UserRegistrationUsingParallelTesting extends TestBase2 {
 		loginObject = new LoginPage(getDriver()); 
 		Thread.sleep(1000);
 		loginObject.UserLogin(email,password);
-		Assert.assertTrue(registerObject.logoutLink.getText().contains("Log out"));
+		Assert.assertTrue(registerObject.logoutLink.getText().equalsIgnoreCase("LOG OUT"));
 	}
 }
